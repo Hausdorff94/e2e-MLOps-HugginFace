@@ -12,7 +12,7 @@ with gr.Blocks() as myblock:
     textbox = gr.Textbox(
         placeholder="Paste your text here...", lines=5, label="Input Text"
     )
-    gr.Interface(
+    interface = gr.Interface(
         fn=predict,
         inputs=textbox,
         outputs="text",
