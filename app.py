@@ -8,11 +8,12 @@ def predict(text):
     return model(text)[0]["summary_text"]
 
 
-with gr.Blocks() as myblock:
-    textbox = gr.Textbox(
+
+textbox = gr.Textbox(
         placeholder="Paste your text here...", lines=5, label="Input Text"
     )
-    interface = gr.Interface(
+
+interface = gr.Interface(
         fn=predict,
         inputs=textbox,
         outputs="text",
@@ -21,4 +22,4 @@ with gr.Blocks() as myblock:
         article="https://huggingface.co/transformers/model_doc/bart.html",
     )
 
-myblock.launch()
+interface.launch()
