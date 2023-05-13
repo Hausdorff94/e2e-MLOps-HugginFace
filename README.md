@@ -1,1 +1,1 @@
-# e2e-MLOps-HugginFace
+# End to End MLOps with HugginFace Spaces
